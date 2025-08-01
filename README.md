@@ -6,6 +6,13 @@
 
 ---
 
+> # Instalar CORS
+> ```bash
+> npm install cors
+> ```
+
+---
+
 > # Rodar o projeto
 > 
 > ```bash
