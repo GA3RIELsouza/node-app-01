@@ -4,8 +4,12 @@ const cors = require('cors')
 const app = express()
 const PORT = 3000
 const readUsers = () => {
-    const data = fs.readFileSync('./users.json')
-    return JSON.parse(data)
+    try {
+        const data = fs.readFileSync('./users.json')
+        return JSON.parse(data)
+    } catch {
+        return []
+    }
 }
 const writeUsers = (users) => {
     fs.writeFileSync('./users.json', JSON.stringify(users))
