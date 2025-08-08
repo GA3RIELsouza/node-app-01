@@ -77,9 +77,7 @@ app.put('/users/:id', (req, res) => {
     }
 
     const name = req.body.name
-    users[0].name = name
-
-    writeUsers(users)
+    users[index].name = name
 
     res.json({ id: id, name: name })
 })
