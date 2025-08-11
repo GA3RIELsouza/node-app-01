@@ -79,5 +79,7 @@ app.put('/users/:id', (req, res) => {
     const name = req.body.name
     users[index].name = name
 
+    writeUsers(users);
+
     res.json({ id: id, name: name })
 })
